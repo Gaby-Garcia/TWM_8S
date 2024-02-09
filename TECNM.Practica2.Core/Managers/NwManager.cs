@@ -4,15 +4,15 @@ using TECNM.Practica2.Core.Services.Interfaces;
 
 namespace TECNM.Practica2.Core.Managers;
 
-public class ImcManager : IImcManager{
+public class NwManager : INwManager{
 
-    private readonly IImcService _service;
+    private readonly INwService _service;
 
-    public ImcManager(IImcService service){
+    public NwManager(INwService service){
         _service = service;
     }
 
-    public Imc GetImc(Person person){
-        return _service.ProcessImc(person);
+    public Nw GetNw(Person person){
+        return _service.ProcessNw(person);
     }
 }
